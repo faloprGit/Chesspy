@@ -1,7 +1,4 @@
 # Created by falopr
-# Bug 1: When 6 black pawns are deleted in the same place and you try to delete the 7th, he become undeletable. (only black pawns)
-# Bug 2: When all white pawns are deleted, you can only delete 6 black pawns.
-# Solution for the bugs: If a piece cannot be deleted with right click, just drag it out of the window.
 import pyglet
 from pyglet.window import mouse
 
@@ -1026,15 +1023,15 @@ def on_mouse_press(x, y, button, modifiers):
         elif wknight2x < x < wknight2x + wknight.width and wknight2y < y < wknight2y + wknight.height:
             wknight2del = False
 
-        if wbishop1x < x < wbishop1x + wbishop.width and wbishop1y < y < wbishop1y + wbishop.height:
+        elif wbishop1x < x < wbishop1x + wbishop.width and wbishop1y < y < wbishop1y + wbishop.height:
             wbishop1del = False
-        if wbishop2x < x < wbishop2x + wbishop.width and wbishop2y < y < wbishop2y + wbishop.height:
+        elif wbishop2x < x < wbishop2x + wbishop.width and wbishop2y < y < wbishop2y + wbishop.height:
             wbishop2del = False
 
-        if wking1x < x < wking1x + wking.width and wking1y < y < wking1y + wking.height:
+        elif wking1x < x < wking1x + wking.width and wking1y < y < wking1y + wking.height:
             wking1del = False
 
-        if wqueen10x < x < wqueen10x + wqueen.width and wqueen10y < y < wqueen10y + wqueen.height:
+        elif wqueen10x < x < wqueen10x + wqueen.width and wqueen10y < y < wqueen10y + wqueen.height:
             wqueen10del = False
 
         elif bpawn1x < x < bpawn1x + bpawn.width and bpawn1y < y < bpawn1y + bpawn.height:
@@ -1049,9 +1046,9 @@ def on_mouse_press(x, y, button, modifiers):
             bpawn5del = False
         elif bpawn6x < x < bpawn6x + bpawn.width and bpawn6y < y < bpawn6y + bpawn.height:
             bpawn6del = False
-        elif wpawn7x < x < bpawn7x + bpawn.width and bpawn7y < y < bpawn7y + bpawn.height:
+        elif bpawn7x < x < bpawn7x + bpawn.width and bpawn7y < y < bpawn7y + bpawn.height:
             bpawn7del = False
-        elif wpawn8x < x < bpawn8x + bpawn.width and bpawn8y < y < bpawn8y + bpawn.height:
+        elif bpawn8x < x < bpawn8x + bpawn.width and bpawn8y < y < bpawn8y + bpawn.height:
             bpawn8del = False
 
         elif brook1x < x < brook1x + brook.width and brook1y < y < brook1y + brook.height:
@@ -1064,15 +1061,15 @@ def on_mouse_press(x, y, button, modifiers):
         elif bknight2x < x < bknight2x + bknight.width and bknight2y < y < bknight2y + bknight.height:
             bknight2del = False
 
-        if bbishop1x < x < bbishop1x + bbishop.width and bbishop1y < y < bbishop1y + bbishop.height:
+        elif bbishop1x < x < bbishop1x + bbishop.width and bbishop1y < y < bbishop1y + bbishop.height:
             bbishop1del = False
-        if bbishop2x < x < bbishop2x + bbishop.width and bbishop2y < y < bbishop2y + bbishop.height:
+        elif bbishop2x < x < bbishop2x + bbishop.width and bbishop2y < y < bbishop2y + bbishop.height:
             bbishop2del = False
 
-        if bking1x < x < bking1x + bking.width and bking1y < y < bking1y + bking.height:
+        elif bking1x < x < bking1x + bking.width and bking1y < y < bking1y + bking.height:
             bking1del = False
 
-        if bqueen10x < x < bqueen10x + bqueen.width and bqueen10y < y < bqueen10y + bqueen.height:
+        elif bqueen10x < x < bqueen10x + bqueen.width and bqueen10y < y < bqueen10y + bqueen.height:
             bqueen10del = False
 
         else:
